@@ -1,11 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
+import { UserContext } from '../../context/userContext';
 import './styles.css';
 
 export default function Login() {
+	
+	let history = useHistory();
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 	const [rememberMe, setRememberMe] = useState(false);
 	const [loginError, setLoginError] = useState('');
+	const { setUser } = useContext(UserContext);
+
+	useEffect(() => {
+		if(localStorage.getItem('token')){
+			redirect();
+		}
+	}, [])
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -26,18 +37,25 @@ export default function Login() {
 				return r.json();
 			})
 			.then((data) => {
-                localStorage.clear();
+				localStorage.clear();
+				setUser({email: email});
+
 				if (rememberMe) {
-					localStorage.setItem('email', email);
 					localStorage.setItem('token', data.token);
 				}
+
+				redirect();
 			});
 	};
+
+	const redirect = () => {
+		history.push('/list')
+	}
 
 	return (
 		<div className="container">
 			<main className="main">
-				<h1 className="title"> Bienvenidos!</h1>
+				<h1 className="title">Bienvenidos!</h1>
 
 				<div className="grid">
 					<form onSubmit={handleSubmit}>
