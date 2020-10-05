@@ -1,0 +1,51 @@
+.container {
+	min-height: 100vh;
+	padding: 0 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.title {
+	margin: 0;
+	line-height: 1.15;
+	font-size: 3rem;
+	text-align: center;
+}
+
+.label {
+	padding: 5px;
+	display: block;
+}
+
+.textfield {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 250px;
+	border: none;
+	border-bottom: 1px solid #757575;
+}
+
+.button {
+    margin-left: 25%;
+    padding: 9px 50px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+	background-color: black;
+    color: white;
+}
+
+.button:hover {
+	background-color: rgba(53, 53, 54, 0.8);
+}
