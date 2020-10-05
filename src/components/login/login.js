@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import { UserContext } from '../../context/userContext';
+import LoginService from '../../services/loginService';
 import './styles.css';
 
 export default function Login() {
@@ -11,6 +12,7 @@ export default function Login() {
 	const [rememberMe, setRememberMe] = useState(false);
 	const [loginError, setLoginError] = useState('');
 	const { setUser } = useContext(UserContext);
+	const loginService = new LoginService();
 
 	useEffect(() => {
 		if(localStorage.getItem('token')){
@@ -18,34 +20,18 @@ export default function Login() {
 		}
 	}, [])
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		fetch(
-			'http://private-8e8921-woloxfrontendinverview.apiary-mock.com/login',
-			{
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify({
-					email,
-					password,
-				}),
+		try {
+			let response = await loginService.login(email, password);
+			setUser({ email: email });
+			if (rememberMe) {
+				localStorage.setItem('token', response.token);
 			}
-		)
-			.then((r) => {
-				return r.json();
-			})
-			.then((data) => {
-				localStorage.clear();
-				setUser({email: email});
-
-				if (rememberMe) {
-					localStorage.setItem('token', data.token);
-				}
-
-				redirect();
-			});
+			redirect();
+		} catch (error) {
+			setLoginError(error);
+		}
 	};
 
 	const redirect = () => {
