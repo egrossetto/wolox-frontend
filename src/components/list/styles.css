@@ -1,0 +1,171 @@
+img {
+	vertical-align: middle;
+}
+
+.icons {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	padding: 2px;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	padding: 2px;
+	justify-content: space-between;
+}
+
+.header_span {
+	display: flex;
+	align-items: center;
+}
+
+.sort {
+	display: flex;
+	align-items: center;
+}
+
+.clear {
+	margin-left: 10px;
+	cursor: pointer;
+	color: red;
+}
+
+.footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.count {
+	color: darkblue;
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.cards_item {
+	padding: 1rem;
+}
+
+.card {
+	background-color: white;
+	border-radius: 0.25rem;
+	box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.card:hover {
+	box-shadow: 5px 10px 18px #888888;
+}
+
+.card_image {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+	overflow: hidden;
+	position: static;
+	padding: 0.25rem;
+}
+
+.card_title {
+	color: black;
+	font-size: 1.25rem;
+	font-weight: 450;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	padding: 1rem;
+}
+
+.card_text {
+	width: 300px;
+	font-size: 0.875rem;
+	margin-bottom: 1.25rem;
+	padding: 1rem;
+}
+
+.tag {
+	display: flex;
+	border-radius: 5px;
+	margin-right: 5px;
+	padding: 5px;
+	float: left;
+}
+
+.author_tag,
+.year_tag,
+.license_tag,
+.language_tag,
+.type_tag {
+	display: flex;
+	color: white;
+	padding: 3px;
+	margin-right: 3px;
+	border-radius: 5px;
+}
+
+.author,
+.year,
+.license,
+.language,
+.type {
+	text-decoration: underline;
+	padding: 3px;
+}
+
+.author_tag {
+	background-color: purple;
+}
+.year_tag {
+	background-color: brown;
+}
+
+.license_tag {
+	background-color: coral;
+}
+
+.language_tag {
+	background-color: darkgreen;
+}
+
+.type_tag {
+	background-color: midnightblue;
+	cursor: pointer;
+}
+
+.textfield {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	display: block;
+	width: 250px;
+	border: none;
+	border-bottom: 1px solid #757575;
+}
+
+@media (max-width: 350px) {
+	img {
+		max-width: 100px;
+	}
+
+	.card {
+		flex-direction: column;
+	}
+
+	.textfield {
+		width: 175px;
+	}
+
+	.sort {
+		margin-left: 5px;
+	}
+}
