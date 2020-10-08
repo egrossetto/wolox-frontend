@@ -1,0 +1,33 @@
+.welcome {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.title_container,
+.image_container {
+	padding: 2.5rem;
+}
+
+.image_container {
+	margin-left: 60px;
+}
+
+.big_text {
+	font-size: 45px;
+}
+
+.green_text {
+	color: #97cf00;
+	font-weight: bold;
+}
+
+@media (max-width: 300px){
+	.title_container,
+	.image_container {
+		padding: 0.1rem;
+		margin-left: 10rem;
+	}
+
+}

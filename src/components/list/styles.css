@@ -1,4 +1,4 @@
-img {
+.tech_image {
 	vertical-align: middle;
 }
 
@@ -153,7 +153,7 @@ img {
 }
 
 @media (max-width: 350px) {
-	img {
+	.tech_image {
 		max-width: 100px;
 	}
 

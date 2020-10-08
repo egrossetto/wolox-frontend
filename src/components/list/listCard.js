@@ -9,7 +9,7 @@ export default function ListCard({ tech, setFilter }) {
 					{tech.tech}
 				</div>
 				<div className="card_image">
-					<img src={tech.logo} alt={tech.tech} />
+					<img src={tech.logo} alt={tech.tech} className="tech_image"/>
 				</div>
 				<div>
 					<div className="card_text">

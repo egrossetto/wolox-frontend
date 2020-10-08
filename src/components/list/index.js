@@ -42,7 +42,7 @@ export default function List() {
 						className="textfield"
 						name="filter"
 						type="text"
-						placeholder="Filtrar.."
+						placeholder="Filter.."
 						value={filter}
 						onChange={(e) => {
 							setFilter(e.target.value.toLowerCase());
@@ -57,11 +57,13 @@ export default function List() {
 					<img
 						src={SortUp}
 						className="icons"
+						alt='Asc'
 						onClick={() => sortByName(true)}
 					/>
 					<img
 						src={SortDown}
 						className="icons"
+						alt='Desc'
 						onClick={() => sortByName(false)}
 					/>
 				</span>

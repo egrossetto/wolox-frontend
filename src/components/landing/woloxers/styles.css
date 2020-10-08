@@ -1,0 +1,94 @@
+.woloxers {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.tweet,
+.text {
+	padding: 2.5rem;
+	width: 740px;
+	height: 375px;
+}
+
+.tweet {
+	background-image: url('../assets/img_woloxer.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.text_wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2rem;
+}
+
+.align_text {
+	display: flex;
+	justify-content: center;
+}
+
+.text {
+	background-color: #f2f5fa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.green_big_text {
+	color: #97cf00;
+}
+
+.blue_big_text {
+	color: #2aa7df;
+	margin-left: 0.7rem;
+}
+
+.white_text {
+	color: white;
+	margin-left: 0.7rem;
+	font-size: x-large;
+	margin-top: 0.7rem;
+}
+
+.twitter_logo {
+	height: 50px;
+	width: 50px;
+}
+
+.follow_button {
+	padding: 9px 50px;
+	border: 2px solid;
+	border-color: #2aa7df;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	background: rgba(255, 255, 255, 0);
+	color: white;
+	font-size: large;
+}
+
+.follow_button:hover {
+	background-color: #2aa7df;
+}
+
+.follow_button:focus {
+	outline: 0;
+}
+
+.big_text {
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+@media (max-width: 350px) {
+	.tweet,
+	.text {
+		margin-left: 10rem;
+	}
+}

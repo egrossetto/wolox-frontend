@@ -1,0 +1,44 @@
+.requirements {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.requirement_title,
+.requirement_list {
+	padding: 2.5rem;
+}
+
+.requirement_list {
+	flex-direction: column;
+}
+
+.title {
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+.requirement_ul {
+	list-style: none;
+}
+
+.requirement_li {
+	display: flex;
+}
+
+.text_li {
+	margin-left: 20px;
+}
+
+@media (max-width: 350px) {
+	.requirement_title,
+	.requirement_list {
+        padding: 5px;
+		margin-left: 10rem;
+    }
+    
+    .text_li{
+        white-space: nowrap;
+    }
+}
