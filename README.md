@@ -21,5 +21,4 @@ Please add a .env file to the main directoy with SKIP_PREFLIGHT_CHECK=true insid
 
 ## Extras
 
-* [husky](https://github.com/typicode/husky#readme)
 * [eslint](https://eslint.org/)
