@@ -18,6 +18,7 @@ export default function Login() {
 		if(localStorage.getItem('token')){
 			redirect();
 		}
+		// eslint-disable-next-line
 	}, [])
 
 	const handleSubmit = async (e) => {
@@ -35,14 +36,15 @@ export default function Login() {
 	};
 
 	const redirect = () => {
-		history.push('/list')
+		history.push('/')
 	}
+
+	const disabled = email === '' && password === '';
 
 	return (
 		<div className="container">
 			<main className="main">
 				<h1 className="title">Bienvenidos!</h1>
-
 				<div className="grid">
 					<form onSubmit={handleSubmit}>
 						<label htmlFor="email" className="label">
@@ -55,6 +57,7 @@ export default function Login() {
 								onChange={(e) => {
 									setEmail(e.target.value);
 								}}
+								maxLength="50"
 							/>
 						</label>
 						<label htmlFor="password" className="label">
@@ -67,6 +70,7 @@ export default function Login() {
 								onChange={(e) => {
 									setPassword(e.target.value);
 								}}
+								maxLength="25"
 							/>
 						</label>
 						<label htmlFor="remember" className="label">
@@ -84,6 +88,7 @@ export default function Login() {
 							type="submit"
 							value="Enviar"
 							className="button"
+							disabled={disabled ? disabled: ''}
 						></input>
 						{loginError && (
 							<p style={{ color: 'red' }}>{loginError}</p>

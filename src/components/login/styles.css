@@ -5,6 +5,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-image: url('../landing/assets/Backgrounds/Bg_Header.png');
 }
 
 .main {
@@ -16,6 +17,7 @@
 
 .title {
 	margin: 0;
+	padding: 2rem;
 	line-height: 1.15;
 	font-size: 3rem;
 	text-align: center;
@@ -36,14 +38,15 @@
 }
 
 .button {
-    margin-left: 25%;
-    padding: 9px 50px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
+	margin-left: 25%;
+	padding: 9px 50px;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
 	background-color: black;
-    color: white;
+	color: white;
+	margin-top: 20px;
 }
 
 .button:hover {
@@ -52,4 +55,10 @@
 
 .button:focus {
 	outline: 0;
+}
+
+.button:disabled {
+	background-color: #cccccc;
+	color: #666666;
+	cursor: default;
 }

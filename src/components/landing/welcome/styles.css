@@ -23,11 +23,21 @@
 	font-weight: bold;
 }
 
-@media (max-width: 300px){
+@media (max-width: 350px){
 	.title_container,
 	.image_container {
 		padding: 0.1rem;
-		margin-left: 10rem;
 	}
 
+	.image_container {
+		margin-left: 0px;
+	}
+
+	.big_text {
+		font-size: 25px;
+	}
+
+	.welcome_img{
+		width: 250px;
+	}
 }

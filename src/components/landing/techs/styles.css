@@ -29,17 +29,20 @@
 		justify-content: center;
 		align-items: center;
 		padding: 5px;
-		margin-left: 10rem;
+	}
+
+	.image_techs_container {
+		margin-left: 0px;
 	}
 
 	.medium_text {
 		text-align: center;
-		font-size: 30px;
+		font-size: 20px;
 		font-weight: 700;
 		white-space: nowrap;
 	}
 
 	.tech_img {
-		width: 300px;
+		width: 250px;
 	}
 }

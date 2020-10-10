@@ -1,26 +1,30 @@
-import React, { useMemo, useState } from 'react';
-import './App.css';
-import Login from './components/login/login';
+import React, { Suspense, useMemo, useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import PrivateRoute from './privateRoute';
-import List from './components/list/index';
-import Landing from './components/landing/index';
 import { UserContext } from './context/userContext';
+import Spinner from './components/spinner';
+import './App.css';
+
+const Login = React.lazy(() => import('./components/login/index'));
+const List = React.lazy(() => import('./components/list/index'));
+const Landing = React.lazy(() => import('./components/landing/index'));
 
 function App() {
 	const [user, setUser] = useState('');
 	const providerValue = useMemo(() => ({ user, setUser }), [user, setUser]);
 
 	return (
-		<Router>
-			<UserContext.Provider value={providerValue}>
-				<div>
-					<Route exact path="/login" component={Login} />
-					<PrivateRoute exact path="/list" component={List} />
-					<PrivateRoute exact path="/" component={Landing} />
-				</div>
-			</UserContext.Provider>
-		</Router>
+		<Suspense fallback={<Spinner />}>
+			<Router>
+				<UserContext.Provider value={providerValue}>
+					<div>
+						<Route exact path="/login" component={Login} />
+						<PrivateRoute exact path="/list" component={List} />
+						<PrivateRoute exact path="/" component={Landing} />
+					</div>
+				</UserContext.Provider>
+			</Router>
+		</Suspense>
 	);
 }
 

@@ -12,13 +12,12 @@ export default function List() {
 
 	useEffect(() => {
 		getList();
+		// eslint-disable-next-line
 	}, []);
 
 	const getList = async () => {
-		try {
-			const response = await listService.getList();
-			setList(response);
-		} catch (error) {}
+		const response = await listService.getList();
+		setList(response);
 	};
 
 	const sortByName = (asc) => {
@@ -57,13 +56,13 @@ export default function List() {
 					<img
 						src={SortUp}
 						className="icons"
-						alt='Asc'
+						alt="Asc"
 						onClick={() => sortByName(true)}
 					/>
 					<img
 						src={SortDown}
 						className="icons"
-						alt='Desc'
+						alt="Desc"
 						onClick={() => sortByName(false)}
 					/>
 				</span>
@@ -78,12 +77,14 @@ export default function List() {
 									setFilter={setFilter}
 								/>
 							);
-					  })
+					})
 					: null}
 			</ul>
 			<div className="footer">
 				<span>
-					<h4 className='count'>Tecnologies: {filteredList.length}</h4>
+					<h4 className="count">
+						Tecnologies: {filteredList.length}
+					</h4>
 				</span>
 			</div>
 		</div>

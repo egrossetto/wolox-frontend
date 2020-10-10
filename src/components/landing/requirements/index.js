@@ -8,7 +8,7 @@ export default function Requirements() {
 	return (
 		<div className="requirements" id="requirements">
 			<div className="requirement_title">
-				<p className="title">Requerimientos</p>
+				<p className="title_reqs">Requerimientos</p>
 			</div>
 			<div className="requirement_list">
 				<ul className="requirement_ul">

@@ -32,6 +32,13 @@ html {
 
 .logo {
 	width: 200px;
+	transform: rotate(0deg);
+	transition: all 0.4s;
+	cursor: pointer;
+}
+
+.logo:hover {
+	transform: rotate(-10deg) scale(1.1);
 }
 
 .header_button {
@@ -56,22 +63,24 @@ html {
 	outline: 0;
 }
 
-@media (max-width: 300px){
-
-	.header{
-		margin-left: 10rem;
+@media (max-width: 350px) {
+	.header {
 		padding: 15px;
 	}
-	.header_buttons{
+	.header_buttons {
 		padding: 5px;
 	}
 
-	.header_titles{
+	.header_titles {
 		padding: 5px;
 		margin-left: 0;
 	}
 
 	.header_button {
 		margin-top: 5px;
+	}
+
+	.welcome_img {
+		width: 300px;
 	}
 }

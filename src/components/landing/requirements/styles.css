@@ -14,7 +14,7 @@
 	flex-direction: column;
 }
 
-.title {
+.title_reqs {
 	font-size: 30px;
 	font-weight: bolder;
 }
@@ -35,10 +35,14 @@
 	.requirement_title,
 	.requirement_list {
         padding: 5px;
-		margin-left: 10rem;
     }
     
     .text_li{
-        white-space: nowrap;
-    }
+		font-size: 10px;
+	}
+	
+	.title_reqs {
+		font-size: 30px;
+		font-weight: bolder;
+	}
 }
