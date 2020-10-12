@@ -21,8 +21,8 @@ Please add a .env file to the main directoy with SKIP_PREFLIGHT_CHECK=true insid
 
 ## Libraries Used
 
-* [react-router-dom](https://reactrouter.com/web/guides/quick-start)
-* [jest](https://jestjs.io/)
+* [react-router-dom](https://reactrouter.com/web/guides/quick-start) <br/>
+* [jest](https://jestjs.io/) <br/>
 * [react-testing-library](https://testing-library.com/docs/react-testing-library/intro)
 
 ## Extras
