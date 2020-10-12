@@ -13,6 +13,12 @@ Launches the app on [http://localhost:3000](http://localhost:3000)
 Start running all test.<br/>
 Please add a .env file to the main directoy with SKIP_PREFLIGHT_CHECK=true inside.
 
+## Availables Routes
+
+[http://localhost:3000/login](http://localhost:3000/login)
+[http://localhost:3000/](http://localhost:3000/) -> Landing
+[http://localhost:3000/list](http://localhost:3000/list) -> Techs list
+
 ## Libraries Used
 
 * [react-router-dom](https://reactrouter.com/web/guides/quick-start)
