@@ -15,14 +15,14 @@ Please add a .env file to the main directoy with SKIP_PREFLIGHT_CHECK=true insid
 
 ## Availables Routes
 
-[http://localhost:3000/login](http://localhost:3000/login)
-[http://localhost:3000/](http://localhost:3000/) -> Landing
+[http://localhost:3000/login](http://localhost:3000/login) \
+[http://localhost:3000/](http://localhost:3000/) -> Landing \
 [http://localhost:3000/list](http://localhost:3000/list) -> Techs list
 
 ## Libraries Used
 
-* [react-router-dom](https://reactrouter.com/web/guides/quick-start) <br/>
-* [jest](https://jestjs.io/) <br/>
+* [react-router-dom](https://reactrouter.com/web/guides/quick-start)
+* [jest](https://jestjs.io/)
 * [react-testing-library](https://testing-library.com/docs/react-testing-library/intro)
 
 ## Extras
